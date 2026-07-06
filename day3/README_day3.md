@@ -81,16 +81,16 @@ drivers e pacotes ROS instalados.
 
 ## Plano do Dia
 
-| Bloco | Duracao | Atividade |
-|---|---:|---|
-| 1 | 30 min | Rever Dia 2 e apresentar LIDAR |
-| 2 | 45 min | Ver leituras de distancia |
-| 3 | 45 min | Introducao pratica a ROS1 e topicos |
-| 4 | 45 min | Visualizar LIDAR no Foxglove/RViz |
-| 5 | 45 min | Controlo por joystick |
-| 6 | 60 min | Experiencia de SLAM e mapa |
-| 7 | 45 min | Continuar treino de modelos |
-| 8 | 30 min | Demonstracao final e discussao |
+| Bloco | Duracao | Tema | Atividade pratica | Ficheiros/tecnologias |
+|---|---:|---|---|---|
+| 1 | 20 min | Arranque e seguranca | Rever o Dia 2, testar bateria, rodas levantadas, botao de paragem e ligacoes da camara/LIDAR. | JetRacer, camara CSI, RPLIDAR |
+| 2 | 45 min | LIDAR basico | Confirmar a porta serie, ler informacao do sensor, recolher scans e observar distancias em texto/graficos. | `test_LIDAR.ipynb`, `front_LR_lidar.py` |
+| 3 | 45 min | Decisoes com LIDAR | Dividir o scan em frente/esquerda/direita, detetar obstaculos e testar uma regra simples de decisao. | `front_LR_lidar.py`, `follow_wall_R_lidar.py` |
+| 4 | 60 min | Road following com sinais | Reutilizar a camara para seguir a estrada e reconhecer sinais, discutindo como o LIDAR pode servir de seguranca. | `jetracer_road_following_sinais.ipynb`, modelo do Dia 2 |
+| 5 | 45 min | ROS1 | Introduzir `roscore`, `rostopic list`, `/scan`, `/cmd_vel`, `/joy` e a ideia de varios nos a comunicar. | ROS Melodic, `rostopic`, drivers do robot |
+| 6 | 45 min | Foxglove | Ligar o Foxglove ao robot por WebSocket e visualizar topicos em tempo real. | `readme_foxglove.md`, `foxglove_bridge`, `/scan`, `/cmd_vel` |
+| 7 | 60 min | SLAM | Arrancar o LIDAR e o pacote de SLAM, conduzir devagar e observar o mapa a ser construido. | `readme_slam.md`, Hector SLAM/GMapping, `/map`, `/tf`, `/odom` |
+| 8 | 30 min | Integracao final | Demonstrar road following com sinais e discutir como LIDAR, ROS, Foxglove e SLAM se complementam. | JetRacer completo, pista, mapa e visualizacao |
 
 ## Parte 1 - O que e' um LIDAR?
 
@@ -381,4 +381,3 @@ No final do Dia 3, cada grupo deve ter:
 - Ter sempre uma forma rapida de parar o robot.
 - Parar imediatamente se o mapa, o joystick ou o modelo tiverem comportamento
   inesperado.
-
