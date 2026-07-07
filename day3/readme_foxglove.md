@@ -14,5 +14,5 @@ rosnode info teleop_joy
 ## Do lado da Foxglove app
 -Dashboard -> Open connection
 -Abrir/escolher Foxglove WebSocket (eg url: ws://192.168.1.83:8765)
--Adicionar painel teleop
+-Adicionar painel teleop (sugestão: usar Foxglove Extensions "Teleop Twist Keyboard" para controlar com teclado)
 -Adicionar topico /cmd_vel

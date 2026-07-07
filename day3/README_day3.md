@@ -58,26 +58,22 @@ Este dia tem mais componentes a correr ao mesmo tempo. Se algo falhar, testar um
 peca de cada vez: primeiro LIDAR, depois ROS, depois visualizacao, depois
 controlo, e so no fim movimento autonomo.
 
-## Estrutura Sugerida da Pasta `day3`
+## Estrutura da Pasta `day3`
 
-Sugestao de ficheiros para este dia:
+Ficheiros usados neste dia:
 
 ```text
 day3/
   README_day3.md
-  01_lidar_basico.ipynb
-  02_ros_topicos.md
-  03_foxglove_slam.md
-  04_joystick.md
-  05_modelos_com_lidar.ipynb
-  launch/
-  datasets/
-  maps/
-  models/
+  test_LIDAR.ipynb
+  front_LR_lidar.py
+  follow_wall_R_lidar.py
+  jetracer_follow_at_fixed_distance_4.ipynb
+  jetracer_road_following_sinais.ipynb
+  readme_foxglove.md
+  readme_slam.md
 ```
 
-Os ficheiros podem ser criados depois conforme a configuracao real do robot,
-drivers e pacotes ROS instalados.
 
 ## Plano do Dia
 
@@ -216,6 +212,8 @@ Fluxo esperado:
 ```text
 joystick -> /joy -> no de teleop -> /cmd_vel -> robot
 ```
+
+Sugestão: usar como alternativa a Foxglove Extensions "Teleop Twist Keyboard" para controlar com teclado
 
 Teste seguro:
 
